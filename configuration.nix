@@ -3,8 +3,6 @@
 {
 
 //Your config
-////
-///
 
 environment.systemPackages = with pkgs; [
         home-manager
@@ -27,7 +25,7 @@ systemd.services.setup-home-manager = {
           fi
 
           if ! sudo -u $USER nix-channel --list | grep -q home-manager; then
-            sudo -u $USER nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
+            sudo -u $USER nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager        //change version on yours
           fi
           
           sudo -u $USER nix-channel --update
